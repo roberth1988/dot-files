@@ -63,11 +63,11 @@ zsh_setup() {
     $1
 
     # get current version of prezto
-    /usr/bin/git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+    /usr/bin/git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
 
     # do manual linking
     ln -s ~/.zprezto/runcoms/zlogin ~/.zlogin
     ln -s ~/.zprezto/runcoms/zlogout ~/.zlogout
     ln -s ~/.zprezto/runcoms/zprofile ~/.zprofile
-    ln -s ~/.zprezto/runcoms/zshenv ~/.zshenv"
+    ln -s ~/.zprezto/runcoms/zshenv ~/.zshenv
 }
