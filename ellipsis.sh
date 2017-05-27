@@ -48,7 +48,7 @@ common_setup() {
 
 zsh_setup() {
     # get current version of prezto
-    git clone clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
+    git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
 
     # do manual linking
     ln -s ~/.zprezto/runcoms/zlogin ~/.zlogin
