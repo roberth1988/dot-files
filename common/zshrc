@@ -5,9 +5,6 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-# add default key behaviour
-bindkey -e
-
 # Theme Settings
 PRIMARY_FG=white
 
@@ -36,3 +33,7 @@ export MS_USER=Rob
 
 # add ellipsis to paths
 export PATH=~/.ellipsis/bin:$PATH
+
+# add default key behaviour
+bindkey -e
+
