@@ -28,9 +28,10 @@ git-configured() {
 
 pkg.install() {
     # call custom helper for different topics
+    common_setup
     git_setup
-    font_setup
     zsh_setup
+    font_setup
 }
 
 common_setup() {
@@ -45,6 +46,17 @@ common_setup() {
     chmod + /usr/local/bin/screen-stats.awk
 }
 
+zsh_setup() {
+    # get current version of prezto
+    git clone clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
+
+    # do manual linking
+    ln -s ~/.zprezto/runcoms/zlogin ~/.zlogin
+    ln -s ~/.zprezto/runcoms/zlogout ~/.zlogout
+    ln -s ~/.zprezto/runcoms/zprofile ~/.zprofile
+    ln -s ~/.zprezto/runcoms/zshenv ~/.zshenv
+}
+
 git_setup() {
     git config --global user.name "Robert Hoppe"
     git config --global user.email "robert.hoppe@nodemash.com"
@@ -56,18 +68,4 @@ font_setup() {
     git clone https://github.com/powerline/fonts.git /tmp/powerline-fonts
     cd /tmp/powerline-fonts; $1 ./install.sh
     rm -fr /tmp/powerline-fonts
-}
-
-zsh_setup() {
-    # go back to $1
-    $1
-
-    # get current version of prezto
-    /usr/bin/git clone --recursive https://github.com/sorin-ionescu/prezto.git ~/.zprezto
-
-    # do manual linking
-    ln -s ~/.zprezto/runcoms/zlogin ~/.zlogin
-    ln -s ~/.zprezto/runcoms/zlogout ~/.zlogout
-    ln -s ~/.zprezto/runcoms/zprofile ~/.zprofile
-    ln -s ~/.zprezto/runcoms/zshenv ~/.zshenv
 }
