@@ -1,0 +1,24 @@
+# ADDRESS-BASE SCREEN RC DEFAULTS
+startup_message     off
+vbell               off
+msgwait             1
+defutf8             on
+autodetach          on
+shelltitle          'bash'
+hardcopydir         $HOME
+defscrollback       10000
+defmonitor          off
+altscreen           on
+hardstatus          on
+hardstatus          alwayslastline
+backtick 1          86400 86400 whoami
+backtick 2          86400 86400 uname -m
+
+backtick            100 0 0 /usr/local/bin/screen-stats.awk
+
+hardstatus          string "%{= kY}%1`%{+b G}@%{+b Y}%H%{-b G} (%2`) %-=%{G}%100` %{w}|%{-} %{Y}%Y%{-}.%{Y}%m%{-}.%{Y}%d%{-} %D %{Y}%C%{-}:%{Y}%s%{-} %a"
+
+caption             always
+caption             string "%-Lw%{= bw}%50>%n %t%{-}%+Lw%<"
+
+shelltitle          '$ |shell'

@@ -1,0 +1,34 @@
+colorscheme default
+set visualbell
+set softtabstop=4
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set title
+set titleold=""
+set laststatus=2
+set showmode
+set fileencoding=utf-8
+set backspace=2
+set ruler
+
+" Optimize for fast terminal connections
+set ttyfast
+
+" Start scrolling three lines before the horizontal window border
+set scrolloff=3
+
+" Enable syntax highlighting
+syntax on
+
+" Enable line numbers
+" set number
+
+" Theme Options
+set background=light
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
+colorscheme solarized
+
