@@ -1,0 +1,14 @@
+"*":
+  core:
+    telemetryConsent: "no"
+    themes: [
+      "one-light-ui"
+      "solarized-light-syntax"
+    ]
+  editor:
+    softWrap: true
+    tabLength: 4
+  "exception-reporting":
+    userId: "f31e890e-fda4-825c-b7d2-7cee463449b5"
+  welcome:
+    showOnStartup: false
