@@ -7,14 +7,14 @@
 pkg.link() {
     fs.link_files common
 
-    case $(os.platform) in
-        osx)
-            fs.link_files platform/osx
-            ;;
-        linux)
-            fs.link_files platform/linux
-            ;;
-    esac
+#    case $(os.platform) in
+#        osx)
+#            fs.link_files platform/osx
+#            ;;
+#        linux)
+#            fs.link_files platform/linux
+#            ;;
+#    esac
 }
 
 git-configured() {
@@ -60,7 +60,7 @@ font_setup() {
 
 zsh_setup() {
     # get current version of prezto
-    git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+    /usr/bin/git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
     # do manual linking
     ln -s "${ZDOTDIR:-$HOME}/.zprezto/runcoms/zlogin" "${ZDOTDIR:-$HOME}/.zlogin"
