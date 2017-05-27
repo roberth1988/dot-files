@@ -59,6 +59,9 @@ font_setup() {
 }
 
 zsh_setup() {
+    # go back to $1
+    $1
+
     # get current version of prezto
     /usr/bin/git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
