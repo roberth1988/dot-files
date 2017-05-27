@@ -20,8 +20,11 @@ fi
 export EDITOR=vim
 
 # zsh customs
+HISTSIZE=10000
+SAVEHIST=10000
 HISTFILE=~/.zsh_history
-SAVEHIST=1000
+
+# allow auto completition
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # force UTF-8
