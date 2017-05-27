@@ -61,6 +61,7 @@ git_setup() {
     git config --global user.name "Robert Hoppe"
     git config --global user.email "robert.hoppe@nodemash.com"
     git config --global github.user "roberth1988"
+    git config --global core.editor vi
 }
 
 font_setup() {
