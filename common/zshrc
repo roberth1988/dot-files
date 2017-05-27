@@ -5,6 +5,9 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+# add default key behaviour
+bindkey -e
+
 # Theme Settings
 PRIMARY_FG=white
 
@@ -15,6 +18,11 @@ fi
 
 # Customize to your needs...
 export EDITOR=vim
+
+# zsh customs
+HISTFILE=~/.zsh_history
+SAVEHIST=1000
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # force UTF-8
 export LC_ALL=en_US.UTF-8 
