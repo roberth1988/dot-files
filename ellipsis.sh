@@ -62,6 +62,9 @@ zsh_setup() {
     # get current version of prezto
     git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
+    # run zsh
+    /usr/local/bin/zsh
+
     setopt EXTENDED_GLOB
     for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
         ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
