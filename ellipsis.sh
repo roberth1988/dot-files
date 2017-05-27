@@ -17,15 +17,6 @@ pkg.link() {
 #    esac
 }
 
-git-configured() {
-    for key in user.name user.email github.user; do
-        if [ -z "$(git config --global $key | cat)"  ]; then
-            return 1
-        fi
-    done
-    return 0
-}
-
 pkg.install() {
     # call custom helper for different topics
     common_setup
