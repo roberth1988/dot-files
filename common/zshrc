@@ -1,0 +1,24 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Theme Settings
+PRIMARY_FG=white
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+export EDITOR=vim
+
+# force UTF-8
+export LC_ALL=en_US.UTF-8 
+export LANG=en_US.UTF-8
+
+# msales GmbH Custom
+export MS_USER=Rob 
