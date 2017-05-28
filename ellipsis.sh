@@ -48,7 +48,7 @@ zsh_setup() {
     ln -s ~/.zprezto/runcoms/zshenv ~/.zshenv
 
     # copy custom agnoster theme
-    cp -R "$PKG_PATH/files/zsh/myagnoster" ~/.zprezto/modules/prompt/external/
+    cp "$PKG_PATH/files/zsh/myagnoster.zsh-theme" ~/.zprezto/modules/prompt/functions/prompt_myagnoster_setup
 }
 
 git_setup() {
