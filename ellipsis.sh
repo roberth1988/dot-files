@@ -53,6 +53,7 @@ git_setup() {
     git config --global user.email "robert.hoppe@nodemash.com"
     git config --global github.user "roberth1988"
     git config --global core.editor vi
+    git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit"
 }
 
 font_setup() {
