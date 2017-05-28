@@ -25,11 +25,12 @@ HISTFILE=~/.zsh_history
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # force UTF-8
-export LC_ALL=en_US.UTF-8 
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # Add User Info for Ansible Deploys
 export MS_USER=Rob
+export DEFAULT_USER="$USER"
 
 # add ellipsis to paths
 export PATH=~/.ellipsis/bin:$PATH
@@ -37,3 +38,8 @@ export PATH=~/.ellipsis/bin:$PATH
 # add default key behaviour
 bindkey -e
 
+# enable powerline
+powerline-daemon -q
+
+# uncomment this line to enable full support of powerline
+#. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
