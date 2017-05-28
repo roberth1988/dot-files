@@ -135,7 +135,7 @@ prompt_virtualenv() {
 }
 
 ## Main prompt
-prompt_agnoster_main() {
+prompt_myagnoster_main() {
   RETVAL=$?
   CURRENT_BG='NONE'
   prompt_status
@@ -146,18 +146,18 @@ prompt_agnoster_main() {
   prompt_end
 }
 
-prompt_agnoster_precmd() {
+prompt_myagnoster_precmd() {
   vcs_info
-  PROMPT='%{%f%b%k%}$(prompt_agnoster_main) '
+  PROMPT='%{%f%b%k%}$(prompt_myagnoster_main) '
 }
 
-prompt_agnoster_setup() {
+prompt_myagnoster_setup() {
   autoload -Uz add-zsh-hook
   autoload -Uz vcs_info
 
   prompt_opts=(cr subst percent)
 
-  add-zsh-hook precmd prompt_agnoster_precmd
+  add-zsh-hook precmd prompt_myagnoster_precmd
 
   zstyle ':vcs_info:*' enable git
   zstyle ':vcs_info:*' check-for-changes false
@@ -165,4 +165,4 @@ prompt_agnoster_setup() {
   zstyle ':vcs_info:git*' actionformats '%b (%a)'
 }
 
-prompt_agnoster_setup "$@"
+prompt_myagnoster_setup "$@"
