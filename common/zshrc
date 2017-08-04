@@ -43,3 +43,16 @@ powerline-daemon -q
 
 # uncomment this line to enable full support of powerline
 #. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+
+# Python
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+# Go Development
+if [ -d "$HOME/GolangProjects" ]
+then
+
+    export GOPATH=$HOME/GolangProjects
+    export GOROOT=/usr/local/opt/go/libexec
+    export PATH=$PATH:$GOPATH/bin
+    export PATH=$PATH:$GOROOT/bin
+fi
