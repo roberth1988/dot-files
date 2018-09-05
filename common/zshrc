@@ -8,6 +8,11 @@
 # Theme Settings
 PRIMARY_FG=white
 
+# source kube_ps1
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
+KUBE_PS1_PREFIX="["
+KUBE_PS1_SUFFIX="|"
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -39,7 +44,11 @@ export PATH=~/.ellipsis/bin:$PATH
 bindkey -e
 
 # enable powerline
-powerline-daemon -q
+# Launch the powerline-daemon if it is not already running
+pgrep -f powerline-daemon > /dev/null
+if [ $? -eq 1 ]; then
+    powerline-daemon -q
+fi
 
 # uncomment this line to enable full support of powerline
 #. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
@@ -56,3 +65,6 @@ then
     export PATH=$PATH:$GOPATH/bin
     export PATH=$PATH:$GOROOT/bin
 fi
+
+# START Custom Aliases
+alias kubetoken="kubectl -n kube-system describe secret \$(kubectl -n kube-system get secret | grep admin-user | awk '{print \$1}')"

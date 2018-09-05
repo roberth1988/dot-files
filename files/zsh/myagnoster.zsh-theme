@@ -148,7 +148,7 @@ prompt_myagnoster_main() {
 
 prompt_myagnoster_precmd() {
   vcs_info
-  PROMPT='%{%f%b%k%}$(prompt_myagnoster_main) '
+  PROMPT='%{%f%b%k%}$(kube_ps1)$(prompt_myagnoster_main) '
 }
 
 prompt_myagnoster_setup() {

@@ -1,0 +1,9 @@
+# defaults
+Host *
+    Port 22
+    ServerAliveInterval 50
+    TCPKeepAlive yes
+    ForwardAgent yes
+    StrictHostKeyChecking no
+    Compression yes
+    AddKeysToAgent yes
