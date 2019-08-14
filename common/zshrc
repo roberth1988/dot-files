@@ -29,6 +29,9 @@ HISTFILE=~/.zsh_history
 # allow auto completition
 fpath=(/usr/local/share/zsh-completions $fpath)
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 # force UTF-8
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
