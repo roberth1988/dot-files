@@ -30,6 +30,7 @@ HISTFILE=~/.zsh_history
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 # fzf
+# https://github.com/junegunn/fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # force UTF-8
