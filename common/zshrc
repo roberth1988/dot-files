@@ -5,6 +5,9 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+# kubens / kubectx settings
+export KUBECTX_IGNORE_FZF=1
+
 # Theme Settings
 PRIMARY_FG=white
 
