@@ -73,5 +73,15 @@ then
     export PATH=$PATH:$GOROOT/bin
 fi
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# https://github.com/junegunn/fzf
+# Fuzzy search
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/mc mc
+
 # START Custom Aliases
-alias kubetoken="kubectl -n kube-system describe secret \$(kubectl -n kube-system get secret | grep admin-user | awk '{print \$1}')"
+# ALIAS HERE
